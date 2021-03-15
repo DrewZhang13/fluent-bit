@@ -79,7 +79,7 @@ struct flb_kube *flb_kube_conf_create(struct flb_filter_instance *ins,
     if (ctx->use_kubelet) {
         ctx->api_host = flb_strdup(FLB_KUBELET_HOST);
         ctx->api_port = ctx->kubelet_port;
-        ctx->api_https = FLB_TRUE;
+        ctx->api_https = ctx->kubelet_port_tls ? FLB_TRUE : FLB_FALSE;
 
         /* This is for unit test diagnostic purposes */
         if (ctx->meta_preload_cache_dir) {

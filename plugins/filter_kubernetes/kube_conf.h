@@ -153,6 +153,7 @@ struct flb_kube {
 
     int use_kubelet;
     int kubelet_port;
+    int kubelet_port_tls;
 
     struct flb_tls *tls;
 

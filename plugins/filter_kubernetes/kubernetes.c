@@ -833,6 +833,14 @@ static struct flb_config_map config_map[] = {
      0, FLB_TRUE, offsetof(struct flb_kube, kubelet_port),
      "kubelet port to connect with when using kubelet"
     },
+    /*
+     * flag for the tls for using kubelet to get pods information
+     */
+    {
+     FLB_CONFIG_MAP_BOOL, "kubelet_port_tls", "true",
+     0, FLB_TRUE, offsetof(struct flb_kube, kubelet_port_tls),
+     "enable tls for kubelet request to get metadata"
+    },
     /* EOF */
     {0}
 };
